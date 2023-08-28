@@ -1,0 +1,15 @@
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\bin\Debug\net7.0\Tp1.exe
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\bin\Debug\net7.0\Tp1.deps.json
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\bin\Debug\net7.0\Tp1.runtimeconfig.json
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\bin\Debug\net7.0\Tp1.dll
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\bin\Debug\net7.0\Tp1.pdb
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\Tp1.csproj.AssemblyReference.cache
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\Tp1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\Tp1.AssemblyInfoInputs.cache
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\Tp1.AssemblyInfo.cs
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\Tp1.csproj.CoreCompileInputs.cache
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\Tp1.dll
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\refint\Tp1.dll
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\Tp1.pdb
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\Tp1.genruntimeconfig.cache
+C:\Users\BONILLA\Desktop\Segundo año\Segundo Cuatrimestre\Taller De Lenguaje II\tps\tp1\tl2-tp1-2023-lucianobonilla27\Tp1\obj\Debug\net7.0\ref\Tp1.dll
