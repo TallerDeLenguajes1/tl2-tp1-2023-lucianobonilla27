@@ -1,8 +1,12 @@
 namespace EspacioClase;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
 
 
-class Cliente
+
+
+public class Cliente
     {
         private string nombre;
         private string direccion;
@@ -24,7 +28,7 @@ class Cliente
 
         
     }
-class Pedidos
+public class Pedidos
     {
         private int nro;
         private string obs;
@@ -72,7 +76,7 @@ class Pedidos
 
     }
 
-class Cadete
+public class Cadete
     {
         private int id;
         private string nombre;
@@ -93,7 +97,7 @@ class Cadete
     
     }
 
-class Cadeteria
+public class Cadeteria
     {
         private string nombre;
         private int telefono;
@@ -103,14 +107,15 @@ class Cadeteria
 
         public List<Cadete> ListaCadetes { get => listaCadetes; set => listaCadetes = value; }
         public int NroPedidosCreados { get => nroPedidosCreados; set => nroPedidosCreados = value; }
-        public string Nombre { get => nombre; }
-        public int Telefono { get => telefono; }
+    
         public List<Pedidos> ListaPedidos { get => listaPedidos; set => listaPedidos = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public int Telefono { get => telefono; set => telefono = value; }
 
-        public Cadeteria(string nombre,int telefono, int nroPedidosCreados)
+    public Cadeteria(string nombre,int telefono, int nroPedidosCreados)
             {
-                this.nombre = nombre;
-                this.telefono = telefono;
+                this.Nombre = nombre;
+                this.Telefono = telefono;
                 this.nroPedidosCreados = nroPedidosCreados;
             }
 
@@ -345,4 +350,44 @@ public class AccesoCSV : AccesoADatos
     
 }
 
+
+public class AccesoJson : AccesoADatos
+{
+    
+
+    public override Cadeteria CargarDatos(string archivoInfoCadeteria, string archivoCadetes)
+    {
+        Cadeteria cadeteria = null;
+
+        try
+        {
+            string jsonInfoCadeteria = File.ReadAllText(archivoInfoCadeteria);
+            cadeteria = JsonSerializer.Deserialize<Cadeteria>(jsonInfoCadeteria);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al cargar la información de la cadetería desde JSON: " + ex.Message);
+        }
+
+        try
+        {
+            if (cadeteria != null)
+            {
+                string jsonCadetes = File.ReadAllText(archivoCadetes);
+                var cadetes = JsonSerializer.Deserialize<Cadete[]>(jsonCadetes);
+                cadeteria.ListaCadetes.AddRange(cadetes);
+            }
+            else
+            {
+                Console.WriteLine("Error: La cadetería no se ha cargado correctamente desde JSON.");
+            }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error al cargar la lista de cadetes desde JSON: " + ex.Message);
+        }
+
+        return cadeteria;
+    }
+}
 

@@ -1,6 +1,22 @@
 ﻿using EspacioClase;
-AccesoADatos informacion = new AccesoCSV();
-Cadeteria cadeteria = informacion.CargarDatos("cadeteria.csv","cadetes.csv");
+AccesoADatos informacionCSV = new AccesoCSV();
+AccesoADatos informacionJson = new AccesoJson();
+Console.WriteLine("====Carga de Datos====");
+Console.WriteLine("1) Cargar Datos CSV");
+Console.WriteLine("2) Cargar Datos Json");
+string carga = Console.ReadLine();
+Cadeteria cadeteria = null;
+if (carga == "1")
+{
+    cadeteria = informacionCSV.CargarDatos("cadeteria.csv","cadetes.csv");
+}else
+{
+    if (carga == "2")
+    {
+        cadeteria = informacionJson.CargarDatos("cadeteria.Json","cadetes.Json");
+    }
+}
+ 
 
 while (true)
 {

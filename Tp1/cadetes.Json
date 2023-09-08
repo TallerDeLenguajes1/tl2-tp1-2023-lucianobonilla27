@@ -1,0 +1,56 @@
+[
+    {
+        "Id": 1,
+        "Nombre": "Cadete1",
+        "Direccion": "Direccion1",
+        "Telefono": 123456789
+    },
+    {
+        "Id": 2,
+        "Nombre": "Cadete2",
+        "Direccion": "Direccion2",
+        "Telefono": 987654321
+    },
+    {
+        "Id": 3,
+        "Nombre": "Cadete3",
+        "Direccion": "Direccion3",
+        "Telefono": 732445555
+    },
+    {
+        "Id": 4,
+        "Nombre": "Cadete4",
+        "Direccion": "Direccion4",
+        "Telefono": 515135133
+    },
+    {
+        "Id": 5,
+        "Nombre": "Cadete5",
+        "Direccion": "Direccion5",
+        "Telefono": 555345325
+    },
+    {
+        "Id": 6,
+        "Nombre": "Cadete6",
+        "Direccion": "Direccion6",
+        "Telefono": 955555235
+    },
+    {
+        "Id": 7,
+        "Nombre": "Cadete7",
+        "Direccion": "Direccion7",
+        "Telefono": 123555555
+    },
+    {
+        "Id": 8,
+        "Nombre": "Cadete8",
+        "Direccion": "Direccion8",
+        "Telefono": 555555555
+    },
+    {
+        "Id": 9,
+        "Nombre": "Cadete9",
+        "Direccion": "Direccion9",
+        "Telefono": 552341155
+    }
+]
