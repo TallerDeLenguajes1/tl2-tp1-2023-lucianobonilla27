@@ -122,7 +122,7 @@ public class Cadeteria
         
         
 
-        public void AsignarCadeteAPedido()
+        public Pedidos AsignarCadeteAPedido()
         {
             if (ListaCadetes.Count > 0)
             {
@@ -135,88 +135,51 @@ public class Cadeteria
 
                 nuevoPedido.CadeteAsignado = cadeteAleatorio; // al nuevo pedido le asigno un cadete
                 listaPedidos.Add(nuevoPedido);
+                return nuevoPedido;
 
-                Console.WriteLine("Pedido nro "+nuevoPedido.Nro+" asignado al cadete: " + cadeteAleatorio.Nombre);
+                //Console.WriteLine("Pedido nro "+nuevoPedido.Nro+" asignado al cadete: " + cadeteAleatorio.Nombre);
             }
             else
             {
-                Console.WriteLine("No hay cadetes disponibles para asignar el pedido.");
+                return null;
+                //Console.WriteLine("No hay cadetes disponibles para asignar el pedido.");
             }
         }
 
 
 
-        public void CambiarEstado() // Este metodo recibe por parametro la id del pedido a entregar, busca que cadete lo posee y lo cambia de estado
+        public Pedidos CambiarEstadoPedido(int idPedido, string nuevoEstado)
         {
-
-            Console.WriteLine("Ingrese el ID del pedido a cambiar de estado: ");
-            if (int.TryParse(Console.ReadLine(), out int idPedido))
+            foreach (Pedidos pedido in ListaPedidos)
             {
-                Console.WriteLine("Seleccione el estado al que cambiar:");
-                Console.WriteLine("a) Pendiente");
-                Console.WriteLine("b) En Camino");
-                Console.WriteLine("c) Entregado");
-
-                Console.Write("Opción: ");
-                string opcionEstado = Console.ReadLine();
-
-                string nuevoEstado = "";
-
-                switch (opcionEstado.ToLower())
+                if (idPedido == pedido.Nro)
                 {
-                    case "a":
-                        nuevoEstado = "Pendiente";
-                        break;
-                    case "b":
-                        nuevoEstado = "EnCamino";
-                        break;
-                    case "c":
-                        nuevoEstado = "Entregado";
-                        break;
-                    default:
-                        Console.WriteLine("Opción no válida.");
-                        return;
+                    pedido.Estado = nuevoEstado;
+                    //Console.WriteLine("El pedido nro " + idPedido + " cambio de estado a : " + nuevoEstado);
+                    return pedido;
                 }
-
-                foreach (Pedidos pedido in ListaPedidos)
-                {
-                    
-                    if (idPedido == pedido.Nro)
-                    {
-                        pedido.Estado = nuevoEstado;
-                        Console.WriteLine("El pedido nro " + idPedido + " cambio de estado a : " + nuevoEstado);
-                        return;
-                    }
-                    
-                }
-                
             }
-            else
-            {
-                Console.WriteLine("Ingrese un ID válido.");
-            }
+            //Console.WriteLine("No se encontró el pedido con ID " + idPedido);
+            return null;
         }
-        public void AltaPedido(int idPedido){ // Esta funcion da de alta un pedio por una id recibida
+
+        public bool AltaPedido(int idPedido){ // Esta funcion da de alta un pedio por una id recibida
             foreach (Pedidos pedido in listaPedidos)
             {
                 var pedidoAlta = ListaPedidos.FirstOrDefault(pedido => pedido.Nro == idPedido);
                 if (pedidoAlta != null)
                 {
                     ListaPedidos.Remove(pedidoAlta);
-                    Console.WriteLine("El pedido " + idPedido + " ha sido dado de alta correctamente");
-                    return;
+                    //Console.WriteLine("El pedido " + idPedido + " ha sido dado de alta correctamente");
+                    return true;
                 }
             }
-            Console.WriteLine("No se encontro el pedido " + idPedido + ".");
+            //Console.WriteLine("No se encontro el pedido " + idPedido + ".");
+            return false;
         }
 
-        public void AgregarPedido(Pedidos nuevoPedido)
-        {
-            
-            nuevoPedido.Estado = "EnCamino";
-            ListaPedidos.Add(nuevoPedido);
-            Console.WriteLine("El cadete ha recibido el pedido y esta " + nuevoPedido.Estado + ".");
-        }
+
+
          public int JornalACobrar(int id) {
             int cantPedidosEntregados = 0;
             const int precioPorEnvio = 500;
